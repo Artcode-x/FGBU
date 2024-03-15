@@ -1,5 +1,6 @@
 {
   "name": "redaction-russian-post",
+  "homepage": "https://artcode-x.github.io/FGBU/#",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
