@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/FGBU/static/js/main.b940e239.js",
+    "main.js": "/FGBU/static/js/main.c36250a6.js",
     "index.html": "/FGBU/index.html",
-    "main.b940e239.js.map": "/FGBU/static/js/main.b940e239.js.map"
+    "main.c36250a6.js.map": "/FGBU/static/js/main.c36250a6.js.map"
   },
   "entrypoints": [
-    "static/js/main.b940e239.js"
+    "static/js/main.c36250a6.js"
   ]
 }
