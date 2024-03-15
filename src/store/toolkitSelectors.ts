@@ -7,3 +7,4 @@ export const pageNumberSelector = (store: { store: any }) => mainSelector(store)
 export const allDataSelector = (store: { store: any }) => mainSelector(store).allData
 export const totalPagesCountSelector = (store: { store: any }) => mainSelector(store).totalPageCount
 export const currentPageNumberSelector = (store: { store: any }) => mainSelector(store).currentPageData
+export const PostDataSelector = (store: { store: any }) => mainSelector(store).selectPostData

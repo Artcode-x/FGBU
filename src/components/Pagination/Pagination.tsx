@@ -6,12 +6,12 @@ import { pageNumberUpdate, setCurrentPageData } from "../../store/reducersSlice"
 
 function Pagination() {
   const dispatch = useDispatch()
-  const currentPage = useSelector(pageNumberSelector)
-  const allPagesCount = useSelector(totalPagesCountSelector)
+  const currentPage: number = useSelector(pageNumberSelector)
+  const allPagesCount: number = useSelector(totalPagesCountSelector)
 
   const prev = () => {
     if (currentPage > 1) {
-      const newCurrentPage = currentPage - 1
+      const newCurrentPage: number = currentPage - 1
       dispatch(pageNumberUpdate(newCurrentPage))
       dispatch(setCurrentPageData())
     }

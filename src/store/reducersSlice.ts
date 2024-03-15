@@ -6,6 +6,7 @@ const initialState = {
   allData: [],
   totalPageCount: {},
   currentPageData: [],
+  selectPostData: [],
 }
 
 const reducers = createSlice({
@@ -28,9 +29,12 @@ const reducers = createSlice({
       const currentItems = state.pageNumber > 1 ? (state.pageNumber - 1) * 10 : state.pageNumber - 1
       state.currentPageData = state.allData.slice(currentItems, 10 * state.pageNumber)
     },
+    setSelectPostData: (state, action) => {
+      state.selectPostData = action.payload
+    },
   },
 })
 
-export const { flagUpdate, pageNumberUpdate, allDataUpdate, setTotalPageCount, setCurrentPageData } =
+export const { flagUpdate, pageNumberUpdate, allDataUpdate, setTotalPageCount, setCurrentPageData, setSelectPostData } =
   reducers.actions
 export default reducers
