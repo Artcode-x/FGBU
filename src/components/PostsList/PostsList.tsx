@@ -3,7 +3,7 @@ import * as S from "./PostList.styled"
 import { useDispatch, useSelector } from "react-redux"
 import { currentPageNumberSelector } from "../../store/toolkitSelectors"
 import { IPosts } from "../../interface/interface"
-import { getPosts } from "../api/api"
+import { getPostInfo, getPosts } from "../api/api"
 import { allDataUpdate, setCurrentPageData, setTotalPageCount } from "../../store/reducersSlice"
 import { ForPagination } from "../hooks/hooks"
 
@@ -19,6 +19,12 @@ function PostList() {
     dispatch(setCurrentPageData())
   }
 
+  const clickToPost = async (id: number) => {
+    console.log(id)
+    const resp = await getPostInfo(id)
+    console.log(resp)
+  }
+
   useEffect(() => {
     getAllPosts()
   }, [])
@@ -26,12 +32,19 @@ function PostList() {
   return (
     <S.Parent>
       <S.UserListBlock>
-        {curPage?.map((el: IPosts) => (
+        {curPage?.map((el: IPosts, index: number) => (
           <S.UserInfo key={el.id}>
             <S.TextUrl>id:{el.id}</S.TextUrl>
             <S.TextBold>{el.title}</S.TextBold>
             <S.TextUrl>{el.body}</S.TextUrl>
             <S.TextUrl>{el.userId}</S.TextUrl>
+            <S.GoToPost
+              onClick={() => {
+                clickToPost(el.id)
+              }}
+            >
+              Перейти на страницу поста
+            </S.GoToPost>
           </S.UserInfo>
         ))}
       </S.UserListBlock>

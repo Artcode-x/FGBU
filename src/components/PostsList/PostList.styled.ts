@@ -17,6 +17,9 @@ export const UserListBlock = styled.div`
 export const UserInfo = styled.div`
   border: 1px solid;
   background-color: seashell;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const Product = styled.p`
@@ -59,4 +62,31 @@ export const TextBold = styled.p`
   padding-right: 10px;
   font-size: x-large;
   text-decoration: underline;
+`
+
+export const GoToPost = styled.button`
+  width: 70%;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: black;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: burlywood;
+  }
+  &:disabled {
+    background: gray;
+  }
 `
